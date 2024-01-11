@@ -12,9 +12,11 @@ const Main = () => {
         async function getLatestNews() {
 
             const newsResponse = await fetch('http://localhost:8000/scrap')
+            const newsData = await newsResponse.json()
             if (newsResponse.status === 200) {
-                const newsData = await newsResponse.json()
-                setNewsList(newsData)
+                setNewsList(newsData.news)
+            } else if(newsResponse.status === 500) {
+                alert(newsData.message)
             }
 
         }
