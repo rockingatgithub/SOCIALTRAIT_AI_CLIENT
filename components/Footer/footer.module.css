@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-top: 1px solid #ff6600;
+    border-top: 2px solid #ff6600;
+    background-color: rgb(246, 246, 239);
 }
 
 .search {

@@ -11,12 +11,18 @@ const Main = () => {
         // function to fetch the lastet news items from the server.
         async function getLatestNews() {
 
-            const newsResponse = await fetch('http://localhost:8000/scrap')
-            const newsData = await newsResponse.json()
-            if (newsResponse.status === 200) {
-                setNewsList(newsData.news)
-            } else if(newsResponse.status === 500) {
-                alert(newsData.message)
+            try {
+
+                const newsResponse = await fetch('http://localhost:8000/scrap')
+                const newsData = await newsResponse.json()
+                if (newsResponse.status === 200) {
+                    setNewsList(newsData)
+                } else {
+                    alert("Error occured from server side!")
+                }
+
+            } catch (error) {
+                alert("Error occured while fetching news data!")
             }
 
         }
