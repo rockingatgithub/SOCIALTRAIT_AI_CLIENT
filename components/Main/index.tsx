@@ -6,12 +6,12 @@ const Main = () => {
 
     const [newsList, setNewsList] = useState<News[]>([])
 
-    useEffect( () => {
+    useEffect(() => {
 
-        async function getLatestNews () {
+        // function to fetch the lastet news items from the server.
+        async function getLatestNews() {
 
             const newsResponse = await fetch('http://localhost:8000/scrap')
-            
             if (newsResponse.status === 200) {
                 const newsData = await newsResponse.json()
                 setNewsList(newsData)
@@ -25,11 +25,11 @@ const Main = () => {
     return <div>
 
         <ul className={styles["news-list"]}>
-            { newsList.map( (news, index) => <li className={styles["news-item"]}>
-                    <span className={styles["item-number"]}>{index+1}. &nbsp;</span>
-                    <span className={styles["item-title"]}> {news.title} </span> <br/>
-                    <span className={styles["item-author"]}>by {news.author} &nbsp; {news.postedTime} </span>
-                </li>
+            {newsList.map((news, index) => <li className={styles["news-item"]}>
+                <span className={styles["item-number"]}>{index + 1}. &nbsp;</span>
+                <span className={styles["item-title"]}> {news.title} </span> <br />
+                <span className={styles["item-author"]}>by {news.author} &nbsp; {news.postedTime} </span>
+            </li>
             )}
         </ul>
 
