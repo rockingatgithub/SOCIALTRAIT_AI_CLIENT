@@ -13,7 +13,7 @@ const Main = () => {
 
             try {
 
-                const newsResponse = await fetch('http://localhost:8000/scrap')
+                const newsResponse = await fetch('http://localhost:8000/latestNews')
                 const newsData = await newsResponse.json()
                 if (newsResponse.status === 200) {
                     setNewsList(newsData)
