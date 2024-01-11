@@ -31,6 +31,11 @@
     margin-right: 0.5rem;
 }
 
+.links {
+    font-size: 12px;
+    margin-top: 0.25rem;
+}
+
 @media screen and (max-width: 576px) {
     .menu {
         flex-direction: column;

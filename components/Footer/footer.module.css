@@ -6,3 +6,15 @@
     align-items: center;
     border-top: 1px solid #ff6600;
 }
+
+.search {
+    font-size: 10px;
+}
+
+.footer-links {
+    font-size: 10px;
+}
+
+.search-input {
+    font-size: 10px;
+}

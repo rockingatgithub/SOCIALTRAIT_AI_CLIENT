@@ -24,11 +24,12 @@ const Main = () => {
 
     return <div>
 
-        <ul>
-            { newsList.map( news => <li>
-                    <span> {news.title} </span> <br/>
-                    <span> {news.author} &nbsp; by {news.postedTime} </span>
-                </li> 
+        <ul className={styles["news-list"]}>
+            { newsList.map( (news, index) => <li className={styles["news-item"]}>
+                    <span className={styles["item-number"]}>{index+1}. &nbsp;</span>
+                    <span className={styles["item-title"]}> {news.title} </span> <br/>
+                    <span className={styles["item-author"]}>by {news.author} &nbsp; {news.postedTime} </span>
+                </li>
             )}
         </ul>
 

@@ -9,7 +9,7 @@ const Header = () => {
             </div>
             <div className={styles.menu} >
                 <div className={styles.heading} >Hacker News</div> 
-                <div id="links" >
+                <div className={styles["links"]} >
                     new |
                     past | 
                     comments |

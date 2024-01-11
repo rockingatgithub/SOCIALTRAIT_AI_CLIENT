@@ -3,12 +3,12 @@ import styles from "./footer.module.css"
 const Footer = () => {
 
     return <div className={styles.footer} >
-        <div id="footer-links" >
+        <div className={styles["footer-links"]} >
             Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
         </div>
-        <div id="search"> 
+        <div className={styles["search"]} > 
             <label htmlFor="search">Search:</label> 
-            <input id="search" type="text"  /> 
+            <input id="search" className={styles["search-input"]} type="text"  /> 
         </div>
     </div>
 

@@ -2,3 +2,23 @@
     display: flex;
     align-items: center;
 } */
+
+.item-number {
+    color: grey;
+    font-size: 12px;
+}
+
+.item-title {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+.item-author {
+    color: #828282;
+    font-size: 12px;
+}
+
+.news-list {
+    list-style: none;
+    margin-left: 1rem;
+}
