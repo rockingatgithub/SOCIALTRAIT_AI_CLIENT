@@ -1,0 +1,8 @@
+.footer {
+    display: flex;
+    height: 60px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #ff6600;
+}
